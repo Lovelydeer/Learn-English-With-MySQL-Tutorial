@@ -2,15 +2,15 @@
 
 [Official Tutorial](https://dev.mysql.com/doc/refman/8.4/en/retrieving-data.html)
 
-5.3.4.1 Selecting All Data
-5.3.4.2 Selecting Particular Rows 
-5.3.4.3 Selecting Particular Columns
-5.3.4.4 Sorting Rows
-5.3.4.5 Date Calculations
-5.3.4.6 Working with NULL Values 
-5.3.4.7 Pattern Matching 
-5.3.4.8 Counting Rows 
-5.3.4.9 Using More Than one Table 
+- 5.3.4.1 Selecting All Data
+- 5.3.4.2 Selecting Particular Rows 
+- 5.3.4.3 Selecting Particular Columns
+- 5.3.4.4 Sorting Rows
+- 5.3.4.5 Date Calculations
+- 5.3.4.6 Working with NULL Values 
+- 5.3.4.7 Pattern Matching 
+- 5.3.4.8 Counting Rows 
+- 5.3.4.9 Using More Than one Table 
 
 The select statement is used to pull information from a table.The general form of statement is:
 
