@@ -1,5 +1,7 @@
 # Selecting All Data
 
+[Official Tutorial](https://dev.mysql.com/doc/refman/8.4/en/selecting-all.html)
+
 The simplest form of `select` retrieves everything from a table:
 `SELECT`最简单的形式就是检索表中的所有内容：
 
