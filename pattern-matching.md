@@ -36,9 +36,9 @@ function(or the REGEXP or RLIKE operators,which are synonyms for REGEXP_LIKE()).
 The following list describes some characteristics of extended regular expressions:
 
 - . matches any single character.
-- A character class [...] matches any character within the brackets.For example,[abc] matches a,b or c.To name a range of characters,use a dash.[a-z] matches any
+- A character class `[...]` matches any character within the brackets.For example,[abc] matches a,b or c.To name a range of characters,use a dash.[a-z] matches any
   letter,whereas [0-9] matches any digit.
-- * matches zero or more instances of the thing preceding it.For example,x* matches any number of x characters,[0-9]* matches any number of digits,and .* matches any number
+- `*` matches zero or more instances of the thing preceding it.For example,x* matches any number of x characters,[0-9]* matches any number of digits,and .* matches any number
   of anything.
 - A regular expression pattern match succeeds if the pattern matches anywhere in the value being tested.(This differs from a LIKE pattern match,which succeed only if
  the pattern matches the entire value.)
