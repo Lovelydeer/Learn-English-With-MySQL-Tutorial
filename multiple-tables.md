@@ -41,4 +41,17 @@ There are several things to note about this query:
   a `name` column.The query uses an `ON` clause to match up records in the two tables based on the `name` values.
 
   The query uses an `INNER JOIN` to combine the tables.An `INNER JOIN` permits rows from either table to appear in the result if and only if both tables meet the conditions
-  specified in the `ON` clause.In this example,the `ON` clause 
+  specified in the `ON` clause.In this example,the `ON` clause specifies that the name column in the pet table must match the name column in the event table.If a name appears
+  in one table but ont the other,the row does not appear in the result because the condition in the ON clause fails.
+- Because the name column occurs in both tables,you must be specific about which table you mean when referring to the column.This is done by prepending the table name to the column name. 
+
+You need not have two different tables to perform a join.Sometimes it is useful to join a table to itself,if you want to compare records in a table to other records in that same table.For example,to find breeding pairs among your pets,you can join the pet table with itself to produce candidate pairs of live males and females of like species:
+
+```mysql
+select p1.name, p1.sex, p2.name, p2.sex, p1.species
+from pet as p1 inner join pet as p2
+on p1.species = p2.species
+and p1.sex = 'f' and p1.death is null
+and p2.sex = 'm' and p2.death is null;
+```
+In this query,we specify aliases for the table name to refer to the columns and keep straight which instance of the table each column reference i associated with.
