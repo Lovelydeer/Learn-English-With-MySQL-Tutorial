@@ -14,4 +14,21 @@ To find out what tables the default database contains(for example,when you are n
 ```mysql
 show tables;
 ```
-The name of the column in the output produced by this statement is always 
+The name of the column in the output produced by this statement is always Tables_in_db_name,where db_name is the name of database.See section 15.7.7.39"SHOW TABLES Statement",
+for more information.
+
+If you want to find out about the structure of a table,the DESCRIBE statement is useful;it displays information about each of a table's columns:
+
+```mysql
+DESCRIBE pet;
+```
+
+Field indicates the column name,Type is the data type of the column,NULL indicates whether the column can contain NULL values,Key indicates whether the column is indexed,and 
+Default specifies the column's dafault value.Extra dispalys special information about columns: If a column was created with AUTO_INCREMENT option,the value is auto_increment 
+rather than empty.
+
+DESC is a short form of DESCRIBE.See Section 15.8.1,"DESCRIBE Statement",for more information.
+
+You can obtain the create table statement necessary to create an existing table using the show create table statement.See section 15.7.7.11,"SHOW CREATE TABLE STATEMENT".
+
+If you have indexs on a table,SHOW INDEX FROM tbl_name produces information about them.See section 15.7.7.23,"SHOW INDEX Statement",for more about this statement.
